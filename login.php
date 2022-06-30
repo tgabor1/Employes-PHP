@@ -45,9 +45,9 @@ if (isset($_POST['submit'])) {
 
     $username = $_POST['username'];
     $password = $_POST['password'];
+// print password_hash("test",PASSWORD_DEFAULT);
 
     if (!empty($username) && !empty($password)) {
-        // print password_hash("test",PASSWORD_DEFAULT);
         $result = $db->query("SELECT * FROM `utilisateurs` WHERE user='" . $username . "';");
         $find = $result->fetch(PDO::FETCH_ASSOC);
 
